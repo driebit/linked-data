@@ -15,8 +15,8 @@ The Registry is a directory of all available Dutch linked data sources. It
 contains data on:
 
 - organisations
-- [data sets](glossary.md#Data-set)
-- [entities](glossary.md#Entity).
+- [data sets](#data-set)
+- [entities](#entity).
 
 Data sources
 ------------
@@ -150,7 +150,7 @@ TODO
 
 ## Collectiebeheersysteem (CBS)
 
-See [data source](#Data-source).
+See [data source](#data-source).
 
 ## Data dumps
 
@@ -158,7 +158,7 @@ TODO
 
 ## Data set
 
-Or ‘collection’. Consists of [entities](#Entity).
+Or ‘collection’. Consists of [entities](#entity).
 
 ## Data source
 
@@ -166,7 +166,7 @@ TODO. See [Data source](source.md) chapter.
 
 ## Entity
 
-The items (or objects) in a [dataset](#Data-set).
+The items (or objects) in a [dataset](#data-set).
 
 ## Registry
 
