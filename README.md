@@ -72,8 +72,9 @@ name of the organisation or dataset) or it MAY be a handle URI.
 
 For the dataset to be considered linked, it:
 - MUST contain a persistent URI for each entity in the dataset 
-- MUST use predicate URIs for its descriptions  
-- MAY offer links to other datasets.
+- MUST use predicate URIs for its descriptions 
+  ([4 star linked data](https://www.w3.org/DesignIssues/LinkedData.html))
+- MAY offer links to other datasets (5 star linked data)
 
 ### Request an entity
 
