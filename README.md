@@ -4,12 +4,48 @@ Dutch Linked Data Strategy
 Contents
 --------
 
-1. [Registry](#registry)
-2. [Data sources](#data-sources)
-3. [Glossary](#glossary)
+1. [Introduction](#introduction)
+2. [Registry](#registry)
+3. [Data sources](#data-sources)
+4. [Connectors](#connectors)
+5. [Glossary](#glossary)
+
+Introduction
+------------
+
+This document describes an architecture for Dutch linked data sources. 
+
+### General principles
+
+1. Curators remain in control of their data.
+
+2. Do not aggregate.
+
+3. Focused on application of linked data.
+
+4. As opposed to [Aggregators](#aggregator), a separation of concerns between
+   data discovery, retrieval and search. 
 
 Registry
 --------
+
+The registry is a directory of all Dutch linked data sets available. Its aim 
+is to enable *discovery* of linked data sets in a central location. 
+
+It differs from [Aggregators](#aggregator) in three ways.
+
+1. While the Registry contains URIs to entities, it does not store any entity
+   data. The [data source](#data-source) remains the authoritative place for 
+   entity data. 
+2. Because the Registry stores no entity data, it places no restrictions on the
+   structure and terms of metadata other than those described under 
+   [Data sources](#data-sources).
+3. The Registry offers no advanced search capabilities of the data itself. 
+   Searching the data should be done through [Connectors](#connector).   
+    
+This enables the Registry to combine the ideal of decentralized data storage 
+and retrieval with the pragmatism of having a single location to discover 
+data sets.
 
 The Registry is a directory of all available Dutch linked data sources. It 
 contains data on:
@@ -72,25 +108,8 @@ Content-Type: application/ld+json; charset=UTF-8
     "http://purl.org/dc/terms/description": "",
     "http://purl.org/dc/terms/publisher": {
         "@id": "https://zuiderzeecollectie.nl
-    },
-        "http://purl.org/vocab/relationship/childOf": {
-        "@id": "https://www.joodsmonument.nl/rsc/224332"
-    },
-        "http://dbpedia.org/ontology/residence": {
-        "@id": "https://www.joodsmonument.nl/rsc/45385"
-    },
-    "http://xmlns.com/foaf/0.1/thumbnail": {
-    "@id": "https://www.joodsmonument.nl/image/2016/7/31/442n00007006_jpg_mediaclass_admin_media_d320edb0ac6a9e3b6d8f3f57c001c114986dcb01.jpg%28mediaclass-foaf-thumbnail.56b969f0e8c1e384a0390286354b597588085f90%29.jpg"
-    },
-    "http://xmlns.com/foaf/0.1/depiction": [
-    {
-      "@id": "https://www.joodsmonument.nl/image/2016/7/31/442n00007006_jpg_mediaclass_admin_media_d320edb0ac6a9e3b6d8f3f57c001c114986dcb01.jpg%28%29%28E879AD7950E0BBFC79017B3345DC15AA%29.jpg"
-    },
-    {
-      "@id": "https://www.joodsmonument.nl/rsc/127447"
     }
-    ]
-    }
+}
 ```
 
 #### Request an entity from a handle URI 
@@ -125,8 +144,7 @@ original data. To prevent this,
 
 > Data sources SHOULD offer realtime or near-realtime data at these URIs.
 
-Linked data wrapper
--------------------
+### Linked data wrapper
 
 Not all data source software is capable of above requirements. Therefore, a 
 linked data wrapper MAY be introduced that takes care of:
@@ -136,6 +154,13 @@ linked data wrapper MAY be introduced that takes care of:
 
 In this scenario, the requirements for data sources apply to the linked data
 wrapper rather than directly to the source.
+
+Connectors
+----------
+
+
+
+
 
 Glossary
 --------
@@ -148,26 +173,26 @@ Examples: [Europeana](http://www.europeana.eu).
 
 TODO 
 
-## Collectiebeheersysteem (CBS)
+### Collectiebeheersysteem (CBS)
 
 See [data source](#data-source).
 
-## Data dumps
+### Data dumps
 
 TODO
 
-## Data set
+### Data set
 
 Or ‘collection’. Consists of [entities](#entity).
 
-## Data source
+### Data source
 
 TODO. See [Data source](source.md) chapter.
 
-## Entity
+### Entity
 
 The items (or objects) in a [dataset](#data-set).
 
-## Registry
+### Registry
 
 TODO
