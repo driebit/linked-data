@@ -24,7 +24,7 @@ This document describes an architecture for Dutch linked data sources.
 3. Focused on application of linked data.
 
 4. As opposed to [Aggregators](#aggregator), a separation of concerns between
-   data discovery, retrieval and search. 
+   data discovery (Registry), retrieval (data source) and search (Connectors).
 
 Registry
 --------
